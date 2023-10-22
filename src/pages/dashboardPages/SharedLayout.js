@@ -1,0 +1,53 @@
+import { useState } from 'react'
+import { Navigate, Outlet } from 'react-router-dom'
+import { styled } from 'styled-components'
+import Navbar from './Navbar'
+import Sidebar from './Sidebar'
+
+const SharedLayout = () => {
+  const idToken = '123'
+
+  const [sidebarIsOpen, setSidebarIsOpen] = useState(true)
+
+  if (!idToken) {
+    return <Navigate to="/login" />
+  }
+  return (
+    <Wrapper>
+      <main className="main-layout">
+        <Sidebar sidebarIsOpen={sidebarIsOpen} />
+        <div className="content-layout">
+          <Navbar
+            setSidebarIsOpen={setSidebarIsOpen}
+            sidebarIsOpen={sidebarIsOpen}
+          />
+          <div className="dashboard-page">
+            <Outlet />
+          </div>
+        </div>
+      </main>
+    </Wrapper>
+  )
+}
+export default SharedLayout
+
+const Wrapper = styled.section`
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  height: 100vh;
+  padding: 0 0.5rem;
+
+  .main-layout {
+    display: flex;
+  }
+
+  .content-layout {
+    width: 100%;
+  }
+
+  /* .dashboard-page {
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+  } */
+`
