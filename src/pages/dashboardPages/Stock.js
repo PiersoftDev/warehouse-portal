@@ -39,22 +39,22 @@ const Stock = () => {
           <Form.Item
             name="warehouseCode"
             label="Warehouse Code"
-            rules={[
-              {
-                required: true,
-              },
-            ]}
+            // rules={[
+            //   {
+            //     required: true,
+            //   },
+            // ]}
           >
             <SearchInput dataIndex="warehouseCode" form={form} />
           </Form.Item>
           <Form.Item
             name="projectCode"
             label="Project Code"
-            rules={[
-              {
-                required: true,
-              },
-            ]}
+            // rules={[
+            //   {
+            //     required: true,
+            //   },
+            // ]}
           >
             <SearchInput dataIndex="projectCode" form={form} />
           </Form.Item>

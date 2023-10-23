@@ -61,8 +61,12 @@ const SearchInput = (props) => {
         showSearch
         value={value}
         placeholder={placeholder}
-        style={{ width: 200 }}
-        // style={{ width: '100%', marginBottom: 0 }}
+        style={{
+          width: '100%',
+          marginBottom: 0,
+          minWidth: '7rem',
+          fontSize: '0.7rem',
+        }}
         defaultActiveFirstOption={false}
         suffixIcon={null}
         filterOption={false}
@@ -80,9 +84,9 @@ const SearchInput = (props) => {
 export default SearchInput
 
 const Wrapper = styled.div`
-  /* .ant-select-in-form-item {
+  .ant-select-in-form-item {
     width: ${({ width }) => (width ? width : 200)} !important;
-  } */
+  }
 
   margin-bottom: 0 !important;
 `

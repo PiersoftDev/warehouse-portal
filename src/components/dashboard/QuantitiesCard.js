@@ -61,7 +61,7 @@ const QuantitiesCard = () => {
 
       <div className="chart-container">
         <MyBarChart
-          width={700}
+          width={600}
           height={250}
           data={quantitiesData}
           maxYAxisValue={1200}
