@@ -83,7 +83,7 @@ const Stock = () => {
       </div>
 
       <div className="Location card">
-        <div className="card-value"> Location Stock</div>
+        <div className="card-value"> Stock Point Stock</div>
       </div>
       <div className="project card">
         <div className="card-value"> project stock</div>
