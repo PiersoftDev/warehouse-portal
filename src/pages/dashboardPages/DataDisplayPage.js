@@ -1,5 +1,7 @@
 import { Button, Table } from 'antd'
 import { useNavigate } from 'react-router-dom'
+import { FcPrint } from 'react-icons/fc'
+import { AiFillDelete } from 'react-icons/ai'
 
 const columns = [
   {
@@ -82,12 +84,16 @@ const DataDisplayPage = (props) => {
       </div>
 
       <div className="my-table-container">
-        <div className="table-btns-container">
+        {/* <div className="table-btns-container">
           <span>b</span>
           <span>b</span>
-          <span>b</span>
-          <span>b</span>
-        </div>
+          <span>
+            <AiFillDelete />
+          </span>
+          <span>
+            <FcPrint />
+          </span>
+        </div> */}
         <Table
           className="my-custom-table"
           bordered
