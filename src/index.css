@@ -290,47 +290,19 @@ ul {
   gap: 1rem;
 }
 
-/* Analysis container */
+/* Data display page */
 
-.analysis-container {
+.datapage-container {
   padding: 1rem;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 2rem;
+  /* display: grid; */
+
   overflow: scroll;
   scroll-behavior: smooth;
 }
 
-.card {
-  background: var(--white);
-  border-radius: var(--borderRadius);
-  /* box-shadow: var(--shadow-2); */
-  border: 1px solid var(--grey-50);
-  padding: 1rem;
-  transition: var(--transition);
-}
-
-.card:hover {
-  border: 1px solid var(--grey-100);
-  box-shadow: var(--shadow-3);
-}
-
-.card-header {
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--grey-500);
-  font-weight: 600;
-  font-size: 0.7rem;
-  margin-bottom: 1.5rem;
-}
-
-.card-value {
-  display: grid;
-  place-items: center;
-  padding: 1rem;
-  font-size: 1.2rem;
-  font-weight: 500;
-  cursor: pointer;
-  letter-spacing: 2px;
+.top-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

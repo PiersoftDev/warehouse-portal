@@ -6,6 +6,7 @@ import Analysis from './Analysis'
 import Royalty from './Royalty'
 import Reports from './Reports'
 import SharedLayout from './SharedLayout'
+import DataDisplayPage from './DataDisplayPage'
 
 export {
   Dashboard,
@@ -16,4 +17,5 @@ export {
   Royalty,
   Reports,
   SharedLayout,
+  DataDisplayPage,
 }

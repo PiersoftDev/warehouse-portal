@@ -23,15 +23,15 @@ const QuantitiesCard = () => {
           <div className="card-header"> Quantities</div>
           <div className="items-container">
             <Form.Item
-              name="materialCode"
-              label="Material Code"
+              name="itemCode"
+              label="Item Code"
               rules={[
                 {
                   required: true,
                 },
               ]}
             >
-              <SearchInput dataIndex="materialCode" form={form} />
+              <SearchInput dataIndex="itemCode" form={form} />
             </Form.Item>
             <Form.Item
               name="projectCode"

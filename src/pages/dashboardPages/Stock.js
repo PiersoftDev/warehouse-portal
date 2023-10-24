@@ -3,6 +3,7 @@ import { BiCategoryAlt } from 'react-icons/bi'
 import { styled } from 'styled-components'
 import MyBarChart from '../../components/common/MyBarChart'
 import SearchInput from '../../components/common/SearchInput'
+import { NavLink } from 'react-router-dom'
 
 const Stock = () => {
   const [form] = Form.useForm()
@@ -83,9 +84,9 @@ const Stock = () => {
         <div className="card-value"> Warehouse Stock</div>
       </div>
 
-      <div className="Location card">
+      <NavLink to="/stock/table" className="Location card">
         <div className="card-value"> Stock Point Stock</div>
-      </div>
+      </NavLink>
       <div className="project card">
         <div className="card-value"> project stock</div>
       </div>
@@ -162,6 +163,7 @@ const Wrapper = styled.div`
   .card-value {
     display: grid;
     place-items: center;
+    color: var(--grey-600);
     padding: 1rem;
     font-size: 1.2rem;
     font-weight: 500;

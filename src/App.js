@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import {
   Analysis,
   Dashboard,
+  DataDisplayPage,
   Orders,
   Planning,
   Reports,
@@ -18,7 +19,11 @@ function App() {
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Dashboard />} />
-          <Route path="/stock" element={<Stock />} />
+          <Route path="/stock">
+            <Route index element={<Stock />} />
+            <Route path="/stock/table" element={<DataDisplayPage />} />
+          </Route>
+
           <Route path="/orders" element={<Orders />} />
           <Route path="/planning" element={<Planning />} />
           <Route path="/analysis" element={<Analysis />} />
