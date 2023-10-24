@@ -15,12 +15,9 @@ const SharedLayout = () => {
   return (
     <Wrapper>
       <main className="main-layout">
-        <Sidebar sidebarIsOpen={sidebarIsOpen} />
+        <Sidebar sidebar={sidebarIsOpen} />
         <div className="content-layout">
-          <Navbar
-            setSidebarIsOpen={setSidebarIsOpen}
-            sidebarIsOpen={sidebarIsOpen}
-          />
+          <Navbar setSidebarIsOpen={setSidebarIsOpen} sidebar={sidebarIsOpen} />
           <div className="dashboard-page">
             <Outlet />
           </div>

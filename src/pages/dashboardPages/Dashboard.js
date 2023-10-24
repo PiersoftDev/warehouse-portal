@@ -106,6 +106,7 @@ const Dashboard = () => {
       <QuantitiesCard />
 
       <ValuesCard />
+
       <div className="counting-orders card">
         <div className="card-header"> Counting orders</div>
         <div className="card-body-container">

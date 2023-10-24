@@ -3,9 +3,9 @@ import { styled } from 'styled-components'
 import sidebarLinks from '../../assets/data/sidebarLinks'
 import logo from '../../assets/images/logo.png'
 
-const Sidebar = ({ sidebarIsOpen }) => {
+const Sidebar = ({ sidebar }) => {
   return (
-    <Wrapper sidebarIsOpen={sidebarIsOpen}>
+    <Wrapper sidebar={sidebar}>
       <div className="sidebar-container">
         <div className="content">
           <div className="logo-container">
@@ -36,23 +36,21 @@ const Sidebar = ({ sidebarIsOpen }) => {
 }
 export default Sidebar
 
-const Wrapper = styled.nav`
+const Wrapper = styled.div`
   display: block;
   border-right: 1px solid var(--grey-50);
   width: 230px;
-  width: ${({ sidebarIsOpen }) => (sidebarIsOpen ? '230px' : '0px')};
+  width: ${({ sidebar }) => (sidebar ? '230px' : '0px')};
   overflow: hidden;
   transition: var(--transition);
-  padding-right: 1rem;
-
-  transform: ${({ sidebarIsOpen }) =>
-    sidebarIsOpen ? 'translateX(0)' : 'translateX(-200%)'};
+  padding-right: 0.5rem;
 
   .sidebar-container {
     background-color: var(--white);
     height: 100vh;
     position: sticky;
-    top: 0;
+    top: 0px;
+    /* left: 0px; */
   }
 
   .logo-container {

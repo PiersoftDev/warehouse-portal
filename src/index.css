@@ -295,8 +295,9 @@ ul {
 .datapage-container {
   padding: 1rem;
   width: 100%;
-  /* display: grid; */
-
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 2rem;
   overflow: scroll;
   scroll-behavior: smooth;
 }
@@ -305,4 +306,29 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.top-header-title {
+  border: 1px solid var(--grey-100);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  word-spacing: 0.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  font-family: sans-serif;
+  background-color: var(--primary-500);
+  color: var(--white);
+}
+
+.table-btns-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+.my-custom-table {
 }

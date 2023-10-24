@@ -10,7 +10,7 @@ import { AiOutlineLeft } from 'react-icons/ai'
 import { Input } from 'antd'
 const { Search } = Input
 
-const Navbar = ({ setSidebarIsOpen, sidebarIsOpen }) => {
+const Navbar = ({ setSidebarIsOpen, sidebar }) => {
   const firstName = 'John'
   const vendorData = {
     profilePicURL: profilePic,
@@ -24,7 +24,7 @@ const Navbar = ({ setSidebarIsOpen, sidebarIsOpen }) => {
         className="close-sidebar"
         onClick={() => setSidebarIsOpen((value) => !value)}
       >
-        {sidebarIsOpen ? <AiOutlineLeft /> : <AiOutlineRight />}
+        {sidebar ? <AiOutlineLeft /> : <AiOutlineRight />}
       </span>
       <div className="left-content">
         <Search
