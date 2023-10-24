@@ -6,12 +6,12 @@ import SearchInput from '../../components/common/SearchInput'
 const Stock = () => {
   const [form] = Form.useForm()
   const overViewData = [
-    { name: 'Ready to Issue', value: 400 },
-    { name: 'On Hand', value: 800 },
-    { name: 'On Order', value: 200 },
-    { name: 'Blocked', value: 600 },
-    { name: 'Demand', value: 1000 },
-    { name: 'Issued Until', value: 700 },
+    { name: 'Ready to Issue', value: 400, color: '#81C784' },
+    { name: 'On Hand', value: 800, color: '#9FA8DA' },
+    { name: 'On Order', value: 200, color: '#CE93D8' },
+    { name: 'Blocked', value: 600, color: '#F48FB1' },
+    { name: 'Demand', value: 1000, color: '#A5D6A7' },
+    { name: 'Issued Until', value: 700, color: '#90CAF9' },
   ]
 
   return (

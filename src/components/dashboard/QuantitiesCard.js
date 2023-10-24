@@ -5,10 +5,10 @@ import SearchInput from '../common/SearchInput'
 const QuantitiesCard = () => {
   const [form] = Form.useForm()
   const quantitiesData = [
-    { name: 'Budgeted', value: 400 },
-    { name: 'Recieved', value: 800 },
-    { name: 'Issued', value: 600 },
-    { name: 'Surplus', value: 1000 },
+    { name: 'Budgeted', value: 400, color: '#CE93D8' },
+    { name: 'Recieved', value: 800, color: '#80DEEA' },
+    { name: 'Issued', value: 600, color: '#7986CB' },
+    { name: 'Surplus', value: 1000, color: '#90CAF9' },
     // Add more data points...
   ]
   return (

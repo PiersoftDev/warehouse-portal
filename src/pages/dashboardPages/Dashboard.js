@@ -1,23 +1,7 @@
 import { Progress } from 'antd'
 import { styled } from 'styled-components'
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  LabelList,
-} from 'recharts'
-import MyBarChart from '../../components/common/MyBarChart'
 import QuantitiesCard from '../../components/dashboard/QuantitiesCard'
 import ValuesCard from '../../components/dashboard/ValuesCard'
-
-const twoColors = {
-  '0%': '#108ee9',
-  '100%': '#87d068',
-}
 
 const Dashboard = () => {
   return (
@@ -29,21 +13,26 @@ const Dashboard = () => {
             <div className="card-body-item">
               <div className="card-body-item-header">Open Order lines</div>
               <div className="card-body-item-value">
-                <span>12</span> of 32
+                <span style={{ color: '#4CAF50' }}>12</span> of 32
               </div>
-              <Progress percent={40} showInfo={false} size="small" />
+              <Progress
+                percent={40}
+                showInfo={false}
+                size="small"
+                strokeColor={'#4CAF50'}
+              />
             </div>
             <div className="card-items-line"></div>
             <div className="card-body-item">
               <div className="card-body-item-header">To be inspected</div>
               <div className="card-body-item-value">
-                <span>05</span> of 32
+                <span style={{ color: '#FFCA28' }}>05</span> of 32
               </div>
               <Progress
                 percent={15}
                 showInfo={false}
                 size="small"
-                strokeColor={twoColors}
+                strokeColor={'#FFCA28'}
               />
             </div>
           </div>
@@ -56,21 +45,26 @@ const Dashboard = () => {
             <div className="card-body-item">
               <div className="card-body-item-header">Open Order lines</div>
               <div className="card-body-item-value">
-                <span>08</span> of 44
+                <span style={{ color: '#EF5350' }}>08</span> of 44
               </div>
-              <Progress percent={40} showInfo={false} size="small" />
+              <Progress
+                percent={40}
+                showInfo={false}
+                size="small"
+                strokeColor={'#EF5350'}
+              />
             </div>
             <div className="card-items-line"></div>
             <div className="card-body-item">
               <div className="card-body-item-header">Open Shipment lines</div>
               <div className="card-body-item-value">
-                <span>06</span> of 42
+                <span style={{ color: '#42A5F5' }}>06</span> of 42
               </div>
               <Progress
                 percent={15}
                 showInfo={false}
                 size="small"
-                strokeColor={twoColors}
+                strokeColor={'#42A5F5'}
               />
             </div>
           </div>
@@ -83,21 +77,26 @@ const Dashboard = () => {
             <div className="card-body-item">
               <div className="card-body-item-header">Expected Recipets</div>
               <div className="card-body-item-value">
-                <span>10</span> of 18
+                <span style={{ color: '#7E57C2' }}>10</span> of 18
               </div>
-              <Progress percent={40} showInfo={false} size="small" />
+              <Progress
+                percent={40}
+                showInfo={false}
+                size="small"
+                strokeColor={'#7E57C2'}
+              />
             </div>
             <div className="card-items-line"></div>
             <div className="card-body-item">
               <div className="card-body-item-header">Expected issues</div>
               <div className="card-body-item-value">
-                <span>14</span> of 16
+                <span style={{ color: '#AB47BC' }}>14</span> of 16
               </div>
               <Progress
                 percent={78}
                 showInfo={false}
                 size="small"
-                strokeColor={twoColors}
+                strokeColor={'#AB47BC'}
               />
             </div>
           </div>
@@ -116,9 +115,14 @@ const Dashboard = () => {
                 Open Cycle Counting Orders
               </div>
               <div className="card-body-item-value">
-                <span>08</span> of 18
+                <span style={{ color: '#FFCA28' }}>08</span> of 18
               </div>
-              <Progress percent={40} showInfo={false} size="small" />
+              <Progress
+                percent={40}
+                showInfo={false}
+                size="small"
+                strokeColor={'#FFCA28'}
+              />
             </div>
           </div>
         </div>
@@ -131,9 +135,14 @@ const Dashboard = () => {
             <div className="card-body-item">
               <div className="card-body-item-header">Adjustment orders</div>
               <div className="card-body-item-value">
-                <span>02</span> of 18
+                <span style={{ color: '#EF5350' }}>02</span> of 18
               </div>
-              <Progress percent={10} showInfo={false} size="small" />
+              <Progress
+                percent={10}
+                showInfo={false}
+                size="small"
+                strokeColor={'#EF5350'}
+              />
             </div>
           </div>
         </div>
@@ -146,9 +155,14 @@ const Dashboard = () => {
             <div className="card-body-item">
               <div className="card-body-item-header">Project-returns</div>
               <div className="card-body-item-value">
-                <span>16</span> of 18
+                <span style={{ color: '#42A5F5' }}>16</span> of 18
               </div>
-              <Progress percent={90} showInfo={false} size="small" />
+              <Progress
+                percent={90}
+                showInfo={false}
+                size="small"
+                strokeColor={'#42A5F5'}
+              />
             </div>
           </div>
         </div>

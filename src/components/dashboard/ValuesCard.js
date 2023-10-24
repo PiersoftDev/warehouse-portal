@@ -5,9 +5,9 @@ import SearchInput from '../common/SearchInput'
 const ValuesCard = () => {
   const [form] = Form.useForm()
   const valuesData = [
-    { name: 'Latest Price', value: 400 },
-    { name: 'Avg Price', value: 800 },
-    { name: 'MAUC', value: 600 },
+    { name: 'Latest Price', value: 400, color: '#FFCC80' },
+    { name: 'Avg Price', value: 800, color: '#81C784' },
+    { name: 'MAUC', value: 600, color: '#7986CB' },
   ]
 
   return (
