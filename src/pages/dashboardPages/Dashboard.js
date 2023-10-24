@@ -195,7 +195,7 @@ const Wrapper = styled.div`
   }
 
   .card:hover {
-    border: 1px solid var(--grey-50);
+    border: 1px solid var(--grey-100);
     box-shadow: var(--shadow-3);
   }
 
