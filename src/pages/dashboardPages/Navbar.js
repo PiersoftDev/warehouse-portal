@@ -20,12 +20,12 @@ const Navbar = ({ setSidebarIsOpen, sidebar }) => {
 
   return (
     <Wrapper>
-      <span
+      {/* <span
         className="close-sidebar"
         onClick={() => setSidebarIsOpen((value) => !value)}
       >
         {sidebar ? <AiOutlineLeft /> : <AiOutlineRight />}
-      </span>
+      </span> */}
       <div className="left-content">
         <Search
           placeholder="search warehouse"

@@ -40,6 +40,7 @@ const Wrapper = styled.section`
 
   .content-layout {
     width: 100%;
+    /* background: #ecf3fd; */
   }
 
   /* .dashboard-page {
