@@ -6,13 +6,13 @@ import logo from '../../assets/images/logo.png'
 const Sidebar = ({ sidebar }) => {
   return (
     <Wrapper sidebar={sidebar}>
-      <div className="sidebar-container">
-        <div className="content">
-          <div className="logo-container">
-            <img src={logo} alt="logo" className="logo" />
+      <div className='sidebar-container'>
+        <div className='content'>
+          <div className='logo-container'>
+            <img src={logo} alt='logo' className='logo' />
             <div>Warehousing</div>
           </div>
-          <ul className="nav-links">
+          <ul className='nav-links'>
             {sidebarLinks.map((link, index) => {
               const { id, path, text, icon } = link
               return (
@@ -40,7 +40,6 @@ const Wrapper = styled.div`
   display: block;
   border-right: 1px solid var(--grey-50);
   width: 230px;
-  width: ${({ sidebar }) => (sidebar ? '230px' : '0px')};
   overflow: hidden;
   transition: var(--transition);
   padding-right: 0.5rem;

@@ -12,26 +12,27 @@ import {
 } from './pages/dashboardPages'
 import Error from './pages/Error'
 import Login from './pages/Login'
+import Notifications from './components/Notifications/Notifications'
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<SharedLayout />}>
+        <Route path='/' element={<SharedLayout />}>
           <Route index element={<Dashboard />} />
-          <Route path="/stock">
+          <Route path='/stock'>
             <Route index element={<Stock />} />
-            <Route path="/stock/table" element={<DataDisplayPage />} />
+            <Route path='/stock/table' element={<DataDisplayPage />} />
           </Route>
 
-          <Route path="/orders" element={<Orders />} />
-          <Route path="/planning" element={<Planning />} />
-          <Route path="/analysis" element={<Analysis />} />
-          <Route path="/royalty" element={<Royalty />} />
-          <Route path="/reports" element={<Reports />} />
+          <Route path='/orders' element={<Orders />} />
+          <Route path='/planning' element={<Planning />} />
+          <Route path='/analysis' element={<Analysis />} />
+          <Route path='/royalty' element={<Royalty />} />
+          <Route path='/notifications' element={<Notifications />} />
         </Route>
-        <Route path="/login" element={<Login />} />
-        <Route path="*" element={<Error />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='*' element={<Error />} />
       </Routes>
     </BrowserRouter>
   )

@@ -8,15 +8,20 @@ import profilePic from '../../assets/images/profile.jpg'
 import { AiOutlineLeft } from 'react-icons/ai'
 
 import { Input } from 'antd'
+import { useNavigate } from 'react-router-dom'
 const { Search } = Input
 
 const Navbar = ({ setSidebarIsOpen, sidebar }) => {
+  const navigate = useNavigate()
   const firstName = 'John'
   const vendorData = {
     profilePicURL: profilePic,
   }
 
   const onSearch = (value, _e, info) => console.log(info?.source, value)
+  const NotificationClick = () => {
+    navigate('/notifications')
+  }
 
   return (
     <Wrapper>
@@ -26,44 +31,44 @@ const Navbar = ({ setSidebarIsOpen, sidebar }) => {
       >
         {sidebar ? <AiOutlineLeft /> : <AiOutlineRight />}
       </span> */}
-      <div className="left-content">
+      <div className='left-content'>
         <Search
-          placeholder="search warehouse"
+          placeholder='search warehouse'
           onSearch={onSearch}
           enterButton
         />
       </div>
-      <div className="right-content">
-        <div className="notification-container">
-          <div className="notification-inner-container">
-            <span className="notification-icon">
-              <AiOutlineBell />
+      <div className='right-content'>
+        <div className='notification-container'>
+          <div className='notification-inner-container'>
+            <span className='notification-icon'>
+              <AiOutlineBell onClick={NotificationClick} />
             </span>
-            <span className="notification-count">2</span>
+            <span className='notification-count'>2</span>
           </div>
         </div>
-        <div className="profile-container">
-          <div className="profile-pic-container-settings">
+        <div className='profile-container'>
+          <div className='profile-pic-container-settings'>
             {vendorData.profilePicURL ? (
               <img
                 src={vendorData.profilePicURL}
-                alt="pic"
-                className="profile-pic"
+                alt='pic'
+                className='profile-pic'
               />
             ) : (
-              <span className="upload-image-icon">
+              <span className='upload-image-icon'>
                 <BsFillPersonFill />
               </span>
             )}
           </div>
-          <div className="profile-text-content">
-            <div className="name-container">
-              <div className="profile-name">{firstName}</div>
-              <span className="dropdown-icon">
+          <div className='profile-text-content'>
+            <div className='name-container'>
+              <div className='profile-name'>{firstName}</div>
+              <span className='dropdown-icon'>
                 <RiArrowDropDownLine />
               </span>
             </div>
-            <button className="logout-btn">Logout</button>
+            <button className='logout-btn'>Logout</button>
           </div>
         </div>
       </div>
