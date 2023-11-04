@@ -141,4 +141,7 @@ fontSize: '1rem',
   .custom-table .ant-table-cell {
   font-size: 0.7rem !important;
 }
+.custom-table .ant-table-cell {
+  font-size: 0.7rem !important;
+}
 `

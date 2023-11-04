@@ -6,6 +6,7 @@ import ExpectedOrderLines from './ExpectedOrderLines'
 
 const MilModal = ({ processMIL, ProcessedRecord, setProcessMIL }) => {
   const [expectedlines, setExpectedLines] = useState(false)
+  const [selectedRowKeys, setSelectedRowKeys] = useState([])
   const [ReceivedLines, setReceivedLines] = useState([
     {
       Position: 1,
@@ -22,7 +23,7 @@ const MilModal = ({ processMIL, ProcessedRecord, setProcessMIL }) => {
       title: 'Position',
       dataIndex: 'Position',
       align: 'center',
-      width: '7vw',
+      width: '8vw',
     },
     {
       title: 'Item',
@@ -57,11 +58,18 @@ const MilModal = ({ processMIL, ProcessedRecord, setProcessMIL }) => {
   ]
 
   const AddOrderLineClick = () => {
+    setSelectedRowKeys([])
     setExpectedLines(true)
   }
 
   const CloseModal = () => {
     setProcessMIL(false)
+  }
+  const rowSelection = {
+    type: 'checkbox',
+    onChange: (selectedRowKeys, selectedRows) => {
+      setSelectedRowKeys(selectedRowKeys)
+    },
   }
   return (
     <Modal
@@ -69,7 +77,8 @@ const MilModal = ({ processMIL, ProcessedRecord, setProcessMIL }) => {
       height='93vh'
       title='Material Intake Log'
       open={processMIL}
-      onCancel={CloseModal}
+      closable={false}
+      footer={null}
       style={{ overflow: 'hidden', marginTop: '-10vh' }}
     >
       <Wrapper>
@@ -209,16 +218,26 @@ const MilModal = ({ processMIL, ProcessedRecord, setProcessMIL }) => {
               </div>
             </div>
             <Table
-              className='Table'
+              className='custom-table'
               dataSource={ReceivedLines}
               columns={Columns}
               pagination={false}
+              rowSelection={rowSelection}
+              size='small'
             />
           </Card>
+        </div>
+        <div className='ButtonsList'>
+          <Button onClick={CloseModal}>Close</Button>
+          <Button>Proceed</Button>
         </div>
         <ExpectedOrderLines
           expectedlines={expectedlines}
           setExpectedLines={setExpectedLines}
+          setReceivedLines={setReceivedLines}
+          ReceivedLines={ReceivedLines}
+          selectedRowKeys={selectedRowKeys}
+          setSelectedRowKeys={setSelectedRowKeys}
         />
       </Wrapper>
     </Modal>
@@ -235,7 +254,7 @@ const Wrapper = styled.div`
     width: 20vw;
     min-width: 300px;
     border-radius: 10px;
-    background: #d8d8e3;
+    background: #ecf3fd;
     margin-right: 0.3rem;
   }
   .CardContent {
@@ -280,12 +299,30 @@ const Wrapper = styled.div`
   .Card2 {
     width: 80vw;
     border-radius: 10px;
-    background: #d8d8e3;
+    background: #ecf3fd;
   }
   .addLine-Buttons {
     transition: 0.5s ease-in-out;
   }
-  .Table {
-    background: #d3d3e6;
+  .custom-table .ant-table-cell {
+    font-size: 0.7rem !important;
+  }
+  .ExpectedOrderLines {
+    position: absolute;
+    transform: translateY(100%);
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+    background: white;
+  }
+  .ExpectedOrderLines.show {
+    transform: translateY(0%);
+  }
+  .ButtonsList {
+    display: flex;
+    gap: 1rem;
+    margin: 1% 0 2% 85%;
   }
 `

@@ -73,15 +73,18 @@ const ProjectReturnNotifications = () => {
     <Wrapper>
       <div
         style={{
-          maxHeight: '73vh',
+          maxHeight: '60vh',
+          width: '100%',
           overflowY: 'hidden',
-          margin: '2vh 0',
+          margin: '-2vh 0',
+          position: 'relative',
         }}
       >
         <Spin spinning={loading}>
           <Table
             columns={Columns}
             dataSource={ProjectReturnNotificationsData}
+            className='custom-table'
             size='small'
             pagination={{
               className: 'custom-pagination',
@@ -115,5 +118,8 @@ const Wrapper = styled.div`
   .custom-pagination .ant-pagination-item {
     margin: 0 0.5rem;
     justify-content: center;
+  }
+  .custom-table .ant-table-cell {
+    font-size: 0.7rem !important;
   }
 `
