@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Table, Spin } from 'antd'
+import { Button, Table, Spin, Card, Checkbox, Modal, Switch } from 'antd'
 import { styled } from 'styled-components'
 import axios from 'axios'
 import MilModal from '../MIL/MilModal'
@@ -69,7 +69,6 @@ const PurchaseReceiptNotifications = () => {
     {
       dataIndex: 'Action',
       align: 'center',
-
       fixed: 'right',
       render: (text, record) => (
         <Button
@@ -139,9 +138,6 @@ fontSize: '1rem',
     justify-content: center;
   }
   .custom-table .ant-table-cell {
-  font-size: 0.7rem !important;
-}
-.custom-table .ant-table-cell {
   font-size: 0.7rem !important;
 }
 `

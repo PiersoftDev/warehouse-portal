@@ -2,11 +2,14 @@ import React, { useEffect, useState } from 'react'
 import { Button, Table, Spin } from 'antd'
 import { styled } from 'styled-components'
 import axios from 'axios'
+import ProjectsIssueModal from '../Project Issues/ProjectIssueModal'
 
 const ProjectIssueNotifications = () => {
   const [ProjectIssueNotificationsData, setProjectIssueNotificationsData] =
     useState([])
   const [loading, setLoading] = useState(false)
+  const [ProcessedRecord, setProcessedRecord] = useState({})
+  const [projectissue, setProjectIssue] = useState(false)
   useEffect(() => {
     try {
       setLoading(true)
@@ -27,6 +30,11 @@ const ProjectIssueNotifications = () => {
       setLoading(false)
     }
   }, [])
+
+  const ProceedButonClick = (record) => {
+    setProjectIssue(true)
+    setProcessedRecord(record)
+  }
 
   const Columns = [
     {
@@ -65,7 +73,12 @@ const ProjectIssueNotifications = () => {
       width: '8vw',
       fixed: 'right',
       render: (text, record) => (
-        <Button className='ProceedButton'>Project Issue</Button>
+        <Button
+          className='ProceedButton'
+          onClick={() => ProceedButonClick(record)}
+        >
+          Project Issue
+        </Button>
       ),
     },
   ]
@@ -98,6 +111,11 @@ const ProjectIssueNotifications = () => {
           />
         </Spin>
       </div>
+      <ProjectsIssueModal
+        projectissue={projectissue}
+        setProjectIssue={setProjectIssue}
+        ProcessedRecord={ProcessedRecord}
+      />
     </Wrapper>
   )
 }
