@@ -112,7 +112,7 @@ const Wrapper = styled.div`
   padding: 1rem 1rem 0 0;
   .ProceedButton {
     background: rgb(89, 89, 191);
-    color: inherit;
+    color: #ccd4cb !important;
     font-size: 0.8rem;
     font-weight: 500;
   }

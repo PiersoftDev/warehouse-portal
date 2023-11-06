@@ -58,6 +58,7 @@ const ExpectedOrderLines = ({
 
   const CloseModal = () => {
     setExpectedLines(false)
+    setSelectedRowKeys([])
   }
 
   const LinkandClose = () => {

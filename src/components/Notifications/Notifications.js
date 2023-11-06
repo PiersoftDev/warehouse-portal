@@ -41,7 +41,11 @@ const Notifications = () => {
     <Wrapper>
       <h4 className='Header'>Notifications</h4>
       <div className='ButtonsContainer'>
-        <Badge count={10} showZero>
+        <Badge
+          count={10}
+          style={{ fontSize: '0.6rem', padding: '1px' }}
+          showZero
+        >
           <Button
             className={
               selectedComponent === 'PurchaseReceipt'
@@ -53,7 +57,11 @@ const Notifications = () => {
             Purchase Receipts
           </Button>
         </Badge>
-        <Badge count={7} showZero>
+        <Badge
+          count={7}
+          style={{ fontSize: '0.6rem', padding: '1px' }}
+          showZero
+        >
           <Button
             className={
               selectedComponent === 'TransferReceipt'
@@ -65,7 +73,11 @@ const Notifications = () => {
             Transfer Receipts
           </Button>
         </Badge>
-        <Badge count={3} showZero>
+        <Badge
+          count={3}
+          style={{ fontSize: '0.6rem', padding: '1px' }}
+          showZero
+        >
           <Button
             className={
               selectedComponent === 'TransferRequest'
@@ -77,7 +89,11 @@ const Notifications = () => {
             Transfer Requests
           </Button>
         </Badge>
-        <Badge count={16} showZero>
+        <Badge
+          count={16}
+          style={{ fontSize: '0.6rem', padding: '1px' }}
+          showZero
+        >
           <Button
             className={
               selectedComponent === 'ProjectIssue'
@@ -89,7 +105,11 @@ const Notifications = () => {
             Project Issues
           </Button>
         </Badge>
-        <Badge count={5} showZero>
+        <Badge
+          count={5}
+          style={{ fontSize: '0.6rem', padding: '1px' }}
+          showZero
+        >
           <Button
             className={
               selectedComponent === 'ProjectReturn'
@@ -101,7 +121,11 @@ const Notifications = () => {
             Project Returns
           </Button>
         </Badge>
-        <Badge count={4} showZero>
+        <Badge
+          count={4}
+          style={{ fontSize: '0.6rem', padding: '1px' }}
+          showZero
+        >
           <Button
             className={
               selectedComponent === 'CostPegRequest'
@@ -113,7 +137,11 @@ const Notifications = () => {
             Cost Peg Requests
           </Button>
         </Badge>
-        <Badge count={5} showZero>
+        <Badge
+          count={5}
+          style={{ fontSize: '0.6rem', padding: '1px' }}
+          showZero
+        >
           <Button
             className={
               selectedComponent === 'ReturnReject'
@@ -136,6 +164,8 @@ export default Notifications
 const Wrapper = styled.div`
   padding: 2rem;
   overflow: hidden;
+  background: #ecf3fd;
+  height: 90vh;
   width: 80vw;
   .Header {
     font-size: 1rem;
@@ -150,8 +180,8 @@ const Wrapper = styled.div`
     display: flex;
     gap: 1.5rem;
     margin: 1rem;
-    padding: 1.6vh 1vh 1vh 1vh;
-    width: 73vw;
+    padding: 1.6vh 1vh 3vh 1vh;
+    width: 75vw;
     position: relative;
     overflow-x: auto;
     scrollbar-width: thin;
@@ -166,10 +196,10 @@ const Wrapper = styled.div`
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
     transition: 0.4s ease-in-out;
     border: none !important;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     font-weight: 500;
     letter-spacing: 1px;
-    width: 10vw;
+    width: 8vw;
     position: relative;
     padding: 3px;
   }
@@ -177,11 +207,12 @@ const Wrapper = styled.div`
   .normalButton {
     background: #e1e3e3;
     color: black;
+    font-size: 0.7rem;
     box-shadow: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     transition: 0.4s ease-in-out;
     border: none !important;
-    width: 10vw;
+    width: 8vw;
     position: relative;
     padding: 3px;
   }
@@ -192,5 +223,6 @@ const Wrapper = styled.div`
   .normalButton:hover {
     color: black !important;
     border: none !important;
+    background: white;
   }
 `
