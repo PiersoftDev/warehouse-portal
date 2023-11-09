@@ -10,15 +10,15 @@ const SharedLayout = () => {
   const [sidebarIsOpen, setSidebarIsOpen] = useState(true)
 
   if (!idToken) {
-    return <Navigate to="/login" />
+    return <Navigate to='/login' />
   }
   return (
     <Wrapper>
-      <main className="main-layout">
+      <main className='main-layout'>
         <Sidebar sidebar={sidebarIsOpen} />
-        <div className="content-layout">
+        <div className='content-layout'>
           <Navbar setSidebarIsOpen={setSidebarIsOpen} sidebar={sidebarIsOpen} />
-          <div className="dashboard-page">
+          <div className='dashboard-page'>
             <Outlet />
           </div>
         </div>
@@ -36,10 +36,13 @@ const Wrapper = styled.section`
 
   .main-layout {
     display: flex;
+    width: 97vw;
+    height: 100vh;
+    overflow: hidden;
   }
 
   .content-layout {
-    width: 100%;
+    width: 78vw;
     /* background: #ecf3fd; */
   }
 
