@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import {
   Analysis,
@@ -14,6 +15,16 @@ import Error from './pages/Error'
 import Login from './pages/Login'
 
 function App() {
+  useEffect(() => {
+    const isWindows = navigator.userAgent.includes('Windows')
+    if (isWindows) {
+      document.documentElement.style.fontSize = '12.8px'
+    }
+    return () => {
+      document.documentElement.style.fontSize = ''
+    }
+  }, [])
+
   return (
     <BrowserRouter>
       <Routes>
